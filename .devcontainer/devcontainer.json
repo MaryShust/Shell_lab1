@@ -1,8 +1,10 @@
 {
+    "name": "Shell Lab",
     "build": {
         "dockerfile": "Dockerfile",
         "context": "."
     },
+    "remoteUser": "vscode",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -13,5 +15,6 @@
                 "foxundermoon.shell-format"
             ]
         }
-    }
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends <доп. пакеты>"
 }
